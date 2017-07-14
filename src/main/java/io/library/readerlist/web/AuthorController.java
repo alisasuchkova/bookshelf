@@ -24,7 +24,16 @@ public class AuthorController {
 
     @PostMapping("/authors")
     public List<Author> addAuthor(@RequestBody Author author) {
-        authorService.addAuthor(author);
-        return authorService.getAllAuthors();
+        return authorService.addAuthor(author);
+    }
+
+    @PutMapping("/authors/{id}")
+    public void updateAuthor(@RequestBody Author author, @PathVariable Long id) {
+        authorService.updateAuthor(id, author);
+    }
+
+    @DeleteMapping("/authors/{id}")
+    public void deleteAuthor(@PathVariable Long id) {
+        authorService.deleteAuthor(id);
     }
 }
