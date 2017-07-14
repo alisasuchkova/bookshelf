@@ -25,7 +25,21 @@ public class AuthorService {
     }
 
 
-    public void addAuthor(Author author) {
+    public List<Author> addAuthor(Author author) {
         allAuthors.add(author);
+        return allAuthors;
+    }
+
+    public void updateAuthor(Long id, Author author) {
+        for (int i = 0; i < allAuthors.size(); i++) {
+            if (allAuthors.get(i).getId().equals(id)) {
+                allAuthors.set(i, author);
+                return;
+            }
+        }
+    }
+
+    public void deleteAuthor(Long id) {
+        allAuthors.removeIf(a -> a.getId().equals(id));
     }
 }
