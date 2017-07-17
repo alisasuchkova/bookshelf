@@ -1,6 +1,8 @@
 package io.library.readerlist.service;
 
-import io.library.readerlist.web.Author;
+import io.library.readerlist.domain.Author;
+import io.library.readerlist.domain.AuthorRepository;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
@@ -11,13 +13,18 @@ import java.util.Objects;
 @Service
 public class AuthorService {
 
+    @Autowired
+    private AuthorRepository authorRepository;
+
     private List<Author> allAuthors = new ArrayList<>(Arrays.asList(
             new Author(1L, "John", "Fowles"),
             new Author(2L, "Stephen", "King"),
             new Author(3L, "Agatha", "Christie")));
 
     public List<Author> getAllAuthors() {
-        return allAuthors;
+        List<Author> authors = new ArrayList<>();
+        authorRepository.findAll().forEach(authors::add);
+        return authors;
     }
 
     public Author getAuthor(Long id) {
@@ -25,9 +32,8 @@ public class AuthorService {
     }
 
 
-    public List<Author> addAuthor(Author author) {
-        allAuthors.add(author);
-        return allAuthors;
+    public void addAuthor(Author author) {
+        authorRepository.save(author);
     }
 
     public void updateAuthor(Long id, Author author) {
