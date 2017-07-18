@@ -6,20 +6,13 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
-import java.util.Objects;
 
 @Service
 public class AuthorService {
 
     @Autowired
     private AuthorRepository authorRepository;
-
-    private List<Author> allAuthors = new ArrayList<>(Arrays.asList(
-            new Author(1L, "John", "Fowles"),
-            new Author(2L, "Stephen", "King"),
-            new Author(3L, "Agatha", "Christie")));
 
     public List<Author> getAllAuthors() {
         List<Author> authors = new ArrayList<>();
@@ -28,24 +21,21 @@ public class AuthorService {
     }
 
     public Author getAuthor(Long id) {
-        return allAuthors.stream().filter(author -> Objects.equals(author.getId(), id)).findFirst().orElse(null);
+        return authorRepository.findOne(id);
     }
-
 
     public void addAuthor(Author author) {
         authorRepository.save(author);
     }
 
     public void updateAuthor(Long id, Author author) {
-        for (int i = 0; i < allAuthors.size(); i++) {
-            if (allAuthors.get(i).getId().equals(id)) {
-                allAuthors.set(i, author);
-                return;
-            }
-        }
+        Author authorToUpdate = authorRepository.findOne(id);
+        authorToUpdate.setName(author.getName());
+        authorToUpdate.setLastName(author.getLastName());
+        authorRepository.save(authorToUpdate);
     }
 
     public void deleteAuthor(Long id) {
-        allAuthors.removeIf(a -> a.getId().equals(id));
+        authorRepository.delete(id);
     }
 }
