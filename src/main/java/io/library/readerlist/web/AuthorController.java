@@ -1,5 +1,6 @@
 package io.library.readerlist.web;
 
+import io.library.readerlist.domain.Author;
 import io.library.readerlist.service.AuthorService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
@@ -23,8 +24,8 @@ public class AuthorController {
     }
 
     @PostMapping("/authors")
-    public List<Author> addAuthor(@RequestBody Author author) {
-        return authorService.addAuthor(author);
+    public void addAuthor(@RequestBody Author author) {
+        authorService.addAuthor(author);
     }
 
     @PutMapping("/authors/{id}")

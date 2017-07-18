@@ -1,7 +1,14 @@
 group 'io.library.readerlist'
 version '1.0-SNAPSHOT'
 
+buildscript {
+    dependencies {
+        classpath "org.springframework.boot:spring-boot-gradle-plugin:1.5.4.RELEASE"
+    }
+}
+
 apply plugin: 'java'
+apply plugin: 'org.springframework.boot'
 
 sourceCompatibility = 1.8
 
@@ -14,5 +21,7 @@ repositories {
 
 dependencies {
     compile("org.springframework.boot:spring-boot-starter-web:1.5.4.RELEASE")
+    compile("org.springframework.boot:spring-boot-starter-data-jpa")
+    compile("com.h2database:h2")
     compileOnly 'org.projectlombok:lombok:1.16.18'
 }
