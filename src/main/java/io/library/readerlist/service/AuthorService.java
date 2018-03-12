@@ -1,12 +1,13 @@
 package io.library.readerlist.service;
 
-import io.library.readerlist.domain.Author;
-import io.library.readerlist.domain.AuthorRepository;
+import java.util.ArrayList;
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import java.util.ArrayList;
-import java.util.List;
+import io.library.readerlist.domain.Author;
+import io.library.readerlist.domain.AuthorRepository;
 
 @Service
 public class AuthorService {

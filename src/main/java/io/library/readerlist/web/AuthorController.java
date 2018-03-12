@@ -1,11 +1,12 @@
 package io.library.readerlist.web;
 
-import io.library.readerlist.domain.Author;
-import io.library.readerlist.service.AuthorService;
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
-import java.util.List;
+import io.library.readerlist.domain.Author;
+import io.library.readerlist.service.AuthorService;
 
 @RestController
 public class AuthorController {
@@ -13,12 +14,12 @@ public class AuthorController {
     @Autowired
     private AuthorService authorService;
 
-    @RequestMapping("/authors")
+    @GetMapping("/authors")
     public List<Author> getAllAuthors() {
         return authorService.getAllAuthors();
     }
 
-    @RequestMapping("/authors/{id}")
+    @GetMapping("/authors/{id}")
     public Author getAuthor(@PathVariable Long id) {
         return authorService.getAuthor(id);
     }
