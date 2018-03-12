@@ -1,4 +1,4 @@
-package io.library.readerlist.service;
+package io.library.reader.service;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -6,8 +6,8 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import io.library.readerlist.domain.Book;
-import io.library.readerlist.domain.BookRepository;
+import io.library.reader.domain.Book;
+import io.library.reader.domain.BookRepository;
 
 @Service
 public class BookService {

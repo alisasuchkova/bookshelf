@@ -1,12 +1,12 @@
-package io.library.readerlist.web;
+package io.library.reader.web;
 
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
-import io.library.readerlist.domain.Author;
-import io.library.readerlist.service.AuthorService;
+import io.library.reader.domain.Author;
+import io.library.reader.service.AuthorService;
 
 @RestController
 public class AuthorController {

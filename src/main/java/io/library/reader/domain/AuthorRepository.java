@@ -1,4 +1,4 @@
-package io.library.readerlist.domain;
+package io.library.reader.domain;
 
 import org.springframework.data.repository.CrudRepository;
 

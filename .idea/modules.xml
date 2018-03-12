@@ -2,9 +2,9 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/readerlist.iml" filepath="$PROJECT_DIR$/.idea/modules/readerlist.iml" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/readerlist_main.iml" filepath="$PROJECT_DIR$/.idea/modules/readerlist_main.iml" group="readerlist" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/readerlist_test.iml" filepath="$PROJECT_DIR$/.idea/modules/readerlist_test.iml" group="readerlist" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/reader.iml" filepath="$PROJECT_DIR$/.idea/modules/reader.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/reader_main.iml" filepath="$PROJECT_DIR$/.idea/modules/reader_main.iml" group="reader" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/reader_test.iml" filepath="$PROJECT_DIR$/.idea/modules/reader_test.iml" group="reader" />
     </modules>
   </component>
 </project>

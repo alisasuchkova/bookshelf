@@ -1,4 +1,4 @@
-package io.library.readerlist.service;
+package io.library.reader.service;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -6,8 +6,8 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import io.library.readerlist.domain.Author;
-import io.library.readerlist.domain.AuthorRepository;
+import io.library.reader.domain.Author;
+import io.library.reader.domain.AuthorRepository;
 
 @Service
 public class AuthorService {

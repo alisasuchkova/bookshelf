@@ -1,4 +1,4 @@
-group 'io.library.readerlist'
+group 'io.library.reader'
 version '1.0-SNAPSHOT'
 
 buildscript {

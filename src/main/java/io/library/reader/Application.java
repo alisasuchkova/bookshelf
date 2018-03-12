@@ -1,4 +1,4 @@
-package io.library.readerlist;
+package io.library.reader;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

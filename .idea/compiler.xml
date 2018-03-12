@@ -5,6 +5,8 @@
       <profile default="true" name="Default" enabled="true" />
     </annotationProcessing>
     <bytecodeTargetLevel>
+      <module name="reader_main" target="1.8" />
+      <module name="reader_test" target="1.8" />
       <module name="readerlist_main" target="1.8" />
       <module name="readerlist_test" target="1.8" />
     </bytecodeTargetLevel>
