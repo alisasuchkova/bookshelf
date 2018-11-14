@@ -25,8 +25,8 @@ public class AuthorService {
         return authorRepository.findOne(id);
     }
 
-    public void addAuthor(Author author) {
-        authorRepository.save(author);
+    public void addAuthors(List<Author> authors) {
+        authorRepository.save(authors);
     }
 
     public void updateAuthor(Long id, Author author) {
