@@ -16,9 +16,7 @@ public class AuthorService {
     private AuthorRepository authorRepository;
 
     public List<Author> getAllAuthors() {
-        List<Author> authors = new ArrayList<>();
-        authorRepository.findAll().forEach(authors::add);
-        return authors;
+        return new ArrayList<>(authorRepository.findAll());
     }
 
     public Author getAuthor(Long id) {
